@@ -1,0 +1,44 @@
+<?php
+	session_start();		
+?>
+
+<html>
+	<head>
+		<style>
+			.wrapper 
+			{
+				background-color: #BBDEFB;
+				height: auto;
+				width: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<?php
+		//if user is logged in, user can logout and/or view their list of books
+		if(isset($_SESSION['logged_in']))
+		{
+			echo 
+			"
+			<div class=wrapper>
+				<center>
+					
+				</center>
+			</div>
+			";	
+		}
+		//if user is not logged in, they cannot open the myList page.  They must login first
+		else
+		{
+			echo 
+			"
+			<div class=wrapper>
+				<center>
+					
+				</center>
+			</div>	
+			";	
+		}
+		?>
+	</body>
+</html>
